@@ -47,7 +47,7 @@ A programming language was created in Python to store messages in a fully encryp
 
 ### Next cell
 
-> is used to go to the next cell in the current stack
+'>' is used to go to the next cell in the current stack
 
 ### Previous cell
 
