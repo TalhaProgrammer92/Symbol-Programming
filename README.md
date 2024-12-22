@@ -1,7 +1,7 @@
 # Symbols - A programming language created by Talha Ahmad (c)
 A programming language was created in Python to store messages in a fully encrypted way that only my compiler could translate.
 
-## SOME INFORMATION
+## USEFUL INFORMATION
 
 1. A stack contains 8 cells which is fixed.
 2. A cell contains 0 as the default value.
