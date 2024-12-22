@@ -325,7 +325,7 @@ class Editor(tk.Tk):
     def __open_file(self) -> None:
         """ Opens an existing file """
         # self.__source_file = tfdg.askopenfilename(defaultextension='.txt', filetypes=[('Text Documents', '*.txt')])
-        self.__source_file = tfdg.askopenfilename(defaultextension='.txt', filetypes=[('Text Documents', '*.sym')])
+        self.__source_file = tfdg.askopenfilename(defaultextension='.sym', filetypes=[('Text Documents', '*.sym')])
 
         if self.__source_file == '':
             self.__source_file = None
