@@ -13,15 +13,15 @@ A programming language was created in Python to store messages in a fully encryp
 
 ### Increment
 
-+ is used to increment the value in the current stack's cell by 1
+'+' is used to increment the value in the current stack's cell by 1
 
 ### Decrement
 
-- is used to decrement the value in the current stack's cell by 1
+'-' is used to decrement the value in the current stack's cell by 1
 
 ### Double
 
-* is used to double the value in the current stack's cell
+'*' is used to double the value in the current stack's cell
 
 ### Half
 
