@@ -1,0 +1,108 @@
+Program to print the following message:
+
+The quick brown fox jumps over a lazy dog
+
+# Store values to all necessary cells
+
+:: Stack 0 ::
+a +++ ***** + >						== S0:C0 to S0:C1
+b +++ ***** ++ >						== S0:C1 to S0:C2
+c +++ ***** +++ >						== S0:C2 to S0:C3
+d +++ ***** ++++ >						== S0:C3 to S0:C4
+
+e +++ ***** +++++ >						== S0:C4 to S0:C5
+f +++ ***** ++++++ >						== S0:C5 to S0:C6
+g +++ ***** +++++++ >						== S0:C6 to S0:C7
+h +++ ***** ++++++++ _(}						== S0:C7 to S0:C0 to S1:C0
+
+:: Stack 1 ::
+i +++ ***** +++++++++ >						== S1:C0 to S1:C1
+j +++ ***** ++++++++++ >						== S1:C1 to S1:C2
+k +++ ***** ++++++++++ + >						== S1:C2 to S1:C3
+l +++ ***** ++++++++++ ++ >						== S1:C3 to S1:C4
+
+m +++ ***** ++++++++++ +++ >						== S1:C4 to S1:C5
+n +++ ***** ++++++++++ ++++ >						== S1:C5 to S1:C6
+o +++ ***** ++++++++++ +++++ >						== S1:C6 to S1:C7
+p +++ ***** ++++++++++ ++++++ _(}						== S1:C7 to S1:C0 to S2:C0
+
+:: Stack 2 ::
+q +++ ***** ++++++++++ +++++++ >						== S2:C0 to S2:C1
+r +++ ***** ++++++++++ ++++++++ >						== S2:C1 to S2:C2
+s +++ ***** ++++++++++ +++++++++ >						== S2:C2 to S2:C3
+T +++ ***** ---------- -- >						== S2:C3 to S2:C4
+
+u +++ ***** ++++++++++ ++++++++++ + >						== S2:C3 to S2:C5
+v +++ ***** ++++++++++ ++++++++++ ++ >						== S2:C5 to S2:C6
+w +++ ***** ++++++++++ ++++++++++ +++ >						== S2:C6 to S2:C7
+x +++ ***** ++++++++++ ++++++++++ ++++ _(}						== S2:C7 to S2:C0 to S3:C0
+
+:: Stack 3 ::
+y +++ ***** ++++++++++ ++++++++++ +++++ >						== S3:C0 to S3:C1
+z +++ ***** ++++++++++ ++++++++++ ++++++ >						== S3:C1 to S3:C2
+Full Stop +++ **** -- >						== S3:C2 to S3:C3
+Space + ***** (						== S3:C3 to S3:C0
+
+# Print the message
+
+:: The ::
+T { >>> @						== S3:C3 to S2:C3
+h [ ) @						== S2:C3 to S0:C7
+e <<< @						== S0:C7 to S0:C4
+Space ] ) <<<< @						== S0:C4 to S3:C3
+
+:: quick ::
+q { ( @						== S3:C3 to S2:C0
+u >>>> @						== S2:C0 to S2:C4
+i { @						== S2:C4 to S1:C0
+c { << @						== S1:C0 to S0:C3
+k } >> @						== S0:C3 to S1:C2
+Space ] @						== S1:C2 to S3:C3
+
+:: brown ::
+b [ < @						== S3:C3 to S0:C2
+r }} <<< @						== S0:C2 to S2:C1
+o { ) < @						== S2:C1 to S1:C6
+w } ) < @						== S1:C6 to S2:C6
+n { < @						== S2:C6 to S1:C5
+Space ] @						== S1:C5 to S3:C3
+
+:: fox ::
+f [ ) << @						== S3:C3 to S0:C5
+o } > @						== S0:C5 to S1:C6
+x } ) @						== S1:C6 to S2:C7
+Space } @						== S2:C7 to S3:C3
+
+:: jumps ::
+j {{ ( > @						== S3:C3 to S1:C1
+u } <<< @						== S1:C1 to S2:C4
+m { >>> @						== S2:C4 to S1:C4
+p ) @						== S1:C4 to S1:C7
+s } << @						== S1:C7 to S2:C2
+Space } @						== S2:C2 to S3:C3
+
+:: over ::
+o {{ < @						== S3:C3 to S1:C6
+v } ) << @						== S1:C6 to S2:C5
+e [ < @						== S2:C5 to S0:C4
+r }} ( > @						== S0:C4 to S2:C1
+Space } @						== S2:C1 to S3:C3
+
+:: a ::
+a [ ( @						== S3:C3 to S0:C0
+Space ] @						== S0:C0 to S3:C3
+
+:: lazy ::
+l {{ <<< @						== S3:C3 to S1:C3
+a { @						== S1:C3 to S0:C0
+z ] << @						== S0:C0 to S3:C1
+y < @						== S3:C1 to S3:C0
+Space >>> @						== S3:C0 to S3:C3
+
+:: dog ::
+d [ >>> @						== S3:C3 to S0:C3
+o } >>> @						== S0:C3 to S1:C6
+g { >>> @						== S1:C6 to S0:C3
+Full Stop ] < @.						== S0:C3 to S3:C2
+
+
