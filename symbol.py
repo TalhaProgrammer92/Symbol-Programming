@@ -43,7 +43,7 @@ class Cell:
 
     def half(self) -> None:
         """ To half the cell's value """
-        self.__value = int(self.__value / 2 if int(self.value * 2) >= 0 else 1)
+        self.__value = int(self.__value / 2 if int(self.value / 2) >= 0 else 1)
 
     def bitwise_and(self, value: int) -> None:
         """ Perform bitwise AND operation """
